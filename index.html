@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Titulo</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+		integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="js/script.js" defer></script>
+</head>
+
+<body>
+	<header class="header">
+		<h1>Engenharia do produto</h1>
+		<nav class="nav">
+			<ul>
+				<li><a href="#analise">Analise</a></li>
+				<li><a href="#planos">planos</a></li>
+
+			</ul>
+		</nav>
+	</header>
+
+	<main class="container" id="analise">
+		<div class="form-analise">
+			<h2 class="title">Analise Tecnica</h2>
+			<div class="fundos">
+				<span>Tipo de fundo</span>
+				<select id="fundos">
+					<option value="27,8">tafeta</option>
+					<option value="27,8 dup">tafeta-plus</option>
+					<option value="32">silk damask</option>
+					<option value="46,2">silk Damask plus</option>
+				</select>
+			</div>
+			<div class="inputs">
+				<div class="produto">
+					<label>Produto</label>
+					<input type="text">
+				</div>
+				<div class="desenho">
+					<label>Desenho</label>
+					<input type="text">
+				</div>
+				<div class="RL">
+					<label>RL</label>
+					<input type="text">
+				</div>
+				<div class="batida">
+					<label>batida</label>
+					<input id="batidas" type="text" id="value">
+				</div>
+
+			</div>
+
+			<div class="btn">
+				<button class="btn-salvar">salvar</button>
+				<button class="btn-excluir">Excluir</button>
+				<button class="btn-limpar">Limpar</button>
+			</div>
+
+		</div>
+
+	</main>
+	<main class="container2" id="planos">
+		<div class="form-analise">
+			<h2 class="title">Analise Tecnica</h2>
+			<div class="fundos">
+				<span>Tipo de fundo</span>
+				<select>
+					<option>tafeta</option>
+					<option>tafeta-plus</option>
+					<option>silk damask</option>
+					<option>silk Damask plus</option>
+				</select>
+			</div>
+			<div class="inputs">
+				<div class="produto">
+					<label>Produto</label>
+					<input type="text">
+				</div>
+				<div class="desenho">
+					<label>Desenho</label>
+					<input type="text">
+				</div>
+				<div class="RL">
+					<label>RL</label>
+					<input type="text">
+				</div>
+				<div class="batida">
+					<label>batida</label>
+					<input type="text">
+				</div>
+
+			</div>
+
+			<div class="btn">
+				<button>salvar</button>
+				<button>Excluir</button>
+				<button>Limpar</button>
+			</div>
+
+		</div>
+
+	</main>
+
+	<script>
+
+		$('.nav a[href^="#"]').on('click', function (e) {
+			e.preventDefault();
+			var id = $(this).attr('href'),
+				targetOffset = $(id).offset().top;
+
+			$('html, body').animate({
+				scrollTop: targetOffset - 100
+			}, 500);
+		});
+	</script>
+</body>
+
+</html>
